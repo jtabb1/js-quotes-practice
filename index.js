@@ -138,17 +138,9 @@ function createNewQuote(e){
 
 /* Attribution:
 
-Viewing and using code from this user's public
-repository has helped me write the code in this file.  I have 
-made some changes to the file in terms of making changes such that,
-all dom node ids are unique, made slight changes to function names
-and responsibilities, and changed how the results of the number of 
-likes are stored and calculated.  However, starting from this solution has 
-definitely helped this solution which is why I attribute it here.
+I used code and ideas from this user's repository to help me write 
+this solution:
 
 https://github.com/abbiecoghlan/js-quotes-practice
-
-There were no license files in this repo at the time I accessed it
-on 4/15/2021.
 
 */
