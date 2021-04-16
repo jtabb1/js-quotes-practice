@@ -143,4 +143,6 @@ this solution:
 
 https://github.com/abbiecoghlan/js-quotes-practice
 
+Thank you!
+
 */
