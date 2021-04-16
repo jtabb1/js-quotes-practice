@@ -1,3 +1,5 @@
+// JS File
+
 const populateURL = 'http://localhost:3000/quotes?_embed=likes'
 const quotesUl = document.querySelector('#quote-list')
 const form = document.querySelector("#new-quote-form")
@@ -13,7 +15,6 @@ function displayQuotesFromDB(){
     return fetch(populateURL)
     .then( resp => resp.json() )
     .then( jsonDB => {
-        console.log(jsonDB);            // <= delete in final version
         jsonDB.forEach( quote => {
             quotesUl.append(makeQuoteLi(quote));
         })
@@ -78,7 +79,7 @@ function likeQuote(e) {
         body: JSON.stringify(
             {
                 quoteId: parseInt(quoteId),
-                createdAt: parseInt(10)            // fix this so that it records the date
+                createdAt: parseInt(10)        // future to do:  (stretch goal) fix this so that it records the date
             }
         )
     }
@@ -135,17 +136,19 @@ function createNewQuote(e){
     })
 }
 
-/* Attributions:
+/* Attribution:
 
-@abbiecoghlan
-* The answer posted on her github helped me-
-  - Get passed my initial stuckness of how I am supposed to start.
-  - Structure the quote with various elements to help it look better.
-  - Use bootstrap to improve the appearance of the quotes.
-  - Use a formula to find the number of likes that each quote got.
-    -> "quote.likes.length" from "parseInt(quote.likes.length)"
-    (maybe the "parseInt()" is necessary to store the function in
-    her newLikeButton.dataset.likes html node field, but I did not use
-    this in my version)
+Viewing and using code from this user's public
+repository has helped me write the code in this file.  I have 
+made some changes to the file in terms of making changes such that,
+all dom node ids are unique, made slight changes to function names
+and responsibilities, and changed how the results of the number of 
+likes are stored and calculated.  However, starting from this solution has 
+definitely helped this solution which is why I attribute it here.
+
+https://github.com/abbiecoghlan/js-quotes-practice
+
+There were no license files in this repo at the time I accessed it
+on 4/15/2021.
 
 */
